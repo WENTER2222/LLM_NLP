@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-from fastapi import FastAPI
-from rag_chat import chat
-
-app = FastAPI()
-
-@app.get("/chat")
-def chat_api(q: str):
-    return {"answer": chat(q)}
-=======
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -48,4 +38,3 @@ def chat_post(question: str = Form(...)):
 
 # 可选：运行 uvicorn 时直接访问 http://127.0.0.1:8000/
 # uvicorn api:app --host 127.0.0.1 --port 8000
->>>>>>> e21122b5bb03284b4fd9da33d7b06268ca26833e
